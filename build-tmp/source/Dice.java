@@ -26,10 +26,12 @@ public void setup()
 public void draw()
 {
 	background(255, 255, 255);
-	one.show();
+	two.roll();
 	one.roll();
 	two.show();
-	two.roll();
+	one.show();
+	fill(0);
+	text(one.numberDots + two.numberDots, 50, 50);
 }
 public void mouseClicked()
 {
@@ -50,6 +52,7 @@ class Die
 	}
 	public void show()
 	{
+		fill(255);
 		rect(myX, myY, 75, 75);
 		if (numberDots == 1)
 		{
